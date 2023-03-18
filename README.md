@@ -4,9 +4,18 @@ For my real-time hand gesture recognition project, I mainly split the work into 
 
 ## Collecting Images of Our Hand Gestures: collect_images.py ##
 To use my webcam to collect images for each label, I accomplished this through OpenCv. To regoning our hand, I used cvzone's HandDetectorModule. Because the classification needs to compare the image of just our hand, I majority of my work is to determine how to crop my hand down, and I was able to do it with information returned by the detector and some math to crop the images and overlay the hand to a consistent size to prevent losses during training. Usage: press key 's' and it will start collect data and put it into the specified label directory.
+{
+Framework used:
+pip install opencv-python
+pip install cvzone
+}
 
 ## Training ##
 To get our model, I used the open source provided by Google teachable machine to train our images and get our model through tensorflow.keras. I have tried to train my data using the tensorflow.keras and applying CNN to classify gestures, but I cannot manage to finish it with a good accuracy.
+{
+Framework used:
+pip install tensorflow
+}
 
 ## Classification & Return Result: display.py ##
 Now, I can classify and return the result using our model and the classifier provided by cvzone in real time. It is basically the same idea as collect images for our hand except now we feed the image to the classifier so that it display the result. Testing results are shown in demo video.
